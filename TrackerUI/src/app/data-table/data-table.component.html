@@ -1,0 +1,53 @@
+<div class="mat-elevation-z8 data-table">
+  <mat-table #table [dataSource]="dataSource" matSort aria-label="Elements">
+    <!-- Id Column -->
+    <!-- Name Column -->
+    <ng-container matColumnDef="clientName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Client Name</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.clientName}}</mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="iot">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>IOT</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.iot}}</mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="market">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Market</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.market}}</mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="geo">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>GEO</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.geo}}</mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="quarter">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Quarter</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.quarter}}</mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="squadLaunchDate">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Squad Launch Date</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.squadLaunchDate}}</mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="expectedCompletionDate">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Expected Completion Date</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.expectedCompletionDate}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator #paginator [length]="dataSource.data.length" [pageIndex]="0" [pageSize]="8"
+    [pageSizeOptions]="[5, 25, 50, 100, 250]">
+  </mat-paginator>
+</div>

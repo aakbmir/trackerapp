@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="headerTag">
+    Manage Users and Roles
+      <a class="btn btn-primary" routerLink="/accountsummary" style="margin-left: 60%;" href="#">Account Summary</a>
+  </div>
+  <div class="dropdownNav">
+      <button class="btn btn-dark userLogin">A</button>
+      <div class="dropdown-content">
+          <a routerLink="/admin">Admin</a>
+          <a (click)="logout()">Logout</a>
+      </div>
+  </div>
+</nav>
+
+
+<div style="margin-top: 1.5vh">
+  <div style="width:95%; margin:auto">
+    <input #query (keyup)="filter(query.value)" type="text" class="form-control" placeholder="Search by User...">
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td>Username</td>
+        <td>Email ID</td>
+        <td>Admin</td>
+        <td>PM</td>
+        <td>IMT Lead</td>
+        <td>IOT Lead</td>
+        <td>Global Lead</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of data; index as i">
+        <td>Aaqib Mir</td>
+        <td>Emailid@in.ibm.com</td>
+
+        
+        <td><div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+          
+        </div></td>
+        <td><div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+          
+        </div></td>
+        <td><div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+          
+        </div>
+          <div class="form-group col-md-6">
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+        <td><div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+          
+        </div>
+          <div class="form-group col-md-6">
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+        </td>
+        <td><div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+          
+        </div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
