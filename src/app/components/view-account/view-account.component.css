@@ -1,0 +1,28 @@
+.headerTag {
+    width: 96%;
+    font-weight: bolder;
+    font-size: larger;
+    margin: auto;
+    margin-top: 2vh;
+}
+
+.body {
+    width: 97%;
+    margin: auto;
+    margin-top:2vh;
+    padding: 1vh;
+}
+
+.border-section {
+    border-radius: 5px;
+    border: 2px solid #c5c9ce;
+    padding:2vh;
+}
+
+.label {
+    font-weight:bold;
+}
+
+.color {
+color:#007bff
+}

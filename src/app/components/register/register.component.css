@@ -1,0 +1,17 @@
+.body {
+    width: 97%;
+    padding-top: 3vh;
+    margin: auto;
+}
+
+.headerTag {
+    font-weight: bolder;
+    font-size: larger;
+    width: 96%;
+    margin: auto;
+}
+
+.border-section {
+    border-radius: 5px;
+    border: 2px solid #c5c9ce
+}
